@@ -1,0 +1,12 @@
+# Local development configuration template
+# Copy this file to application-local.properties and fill in your values
+# DO NOT commit application-local.properties to git!
+
+# Database credentials for local development
+DB_URL=jdbc:mysql://localhost:3306/boutiqueenligne
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+# JPA settings for development
+JPA_SHOW_SQL=true
+JPA_DDL_AUTO=validate
