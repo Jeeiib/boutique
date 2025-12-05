@@ -2,6 +2,7 @@ package com.cda.boutique.entites;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,7 +24,7 @@ public class Commande {
     private Integer id;
 
     @JoinColumn(name = "CL_ID")
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.EAGER)
     private Client client;
 
     @JoinColumn(name = "PA_ID")

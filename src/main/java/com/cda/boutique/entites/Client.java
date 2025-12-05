@@ -1,10 +1,16 @@
 package com.cda.boutique.entites;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -41,4 +47,7 @@ public class Client {
     @Column(name="CL_Telephone", nullable=false, unique=true, length=10)
     private String telephone;
 
+    @OneToMany(mappedBy = "client", targetEntity = Commande.class, fetch=FetchType.LAZY)
+    @JsonIgnore
+    List<Commande> commandes;
 }
