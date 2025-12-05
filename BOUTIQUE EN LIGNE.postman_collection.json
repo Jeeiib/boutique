@@ -72,6 +72,53 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "UPDATE_CLIENT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adresse\": \"15 Rue de Rivoli\",\r\n    \"codePostal\": \"75001\",\r\n    \"email\": \"Dupont.Jean2@entreprise.com\",\r\n    \"nom\": \"Dupont\",\r\n    \"prenom\": \"Jean\",\r\n    \"telephone\": \"0102030401\",\r\n    \"ville\": \"Pariss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_CLIENT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/clients/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"11"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -98,6 +145,32 @@
 							"path": [
 								"api",
 								"commandes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_COMMANDE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adresse\": \"15 Rue de Rivoli\",\r\n    \"codePostal\": \"75001\",\r\n    \"email\": \"Dupont.Jean2@entreprise.com\",\r\n    \"nom\": \"Dupont\",\r\n    \"prenom\": \"Jean\",\r\n    \"telephone\": \"0102030401\",\r\n    \"ville\": \"Paris\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/commandes/15",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"commandes",
+								"15"
 							]
 						}
 					},
@@ -157,6 +230,25 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "DELETE_COMMANDE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/commandes/15",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"commandes",
+								"15"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -189,6 +281,32 @@
 					"response": []
 				},
 				{
+					"name": "GET_PAIEMENT",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"adresse\": \"15 Rue de Rivoli\",\r\n    \"codePostal\": \"75001\",\r\n    \"email\": \"Dupont.Jean2@entreprise.com\",\r\n    \"nom\": \"Dupont\",\r\n    \"prenom\": \"Jean\",\r\n    \"telephone\": \"0102030401\",\r\n    \"ville\": \"Paris\"\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/paiements/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"paiements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "CREATE_PAIEMENT",
 					"request": {
 						"method": "POST",
@@ -210,6 +328,492 @@
 							"path": [
 								"api",
 								"paiements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PAIEMENT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2024-01-01\",\r\n    \"method\": \"Carte de Crédit\",\r\n    \"montant\": 600\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/paiements/12",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"paiements",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_PAIEMENT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/paiements/12",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"paiements",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUITS",
+			"item": [
+				{
+					"name": "GET_PRODUITS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/produits",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_PRODUIT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/produits/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"produits",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_PRODUIT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Télévision HD 50 pouces\",\r\n    \"nom\": \"Télévision\",\r\n    \"prix\": 499.99,\r\n    \"stock\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/produits",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"produits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PRODUIT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"description\": \"Télévision HD 50 pouces\",\r\n        \"nom\": \"Télévision\",\r\n        \"prix\": 1499.99,\r\n        \"stock\": 10\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/produits/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"produits",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_PRODUIT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/produits/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"produits",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORIES",
+			"item": [
+				{
+					"name": "GET_CATEGORIES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/categories",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_CATEGORIE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/categories/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_CATEGORIE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"libelle\": \"Électronique Bis\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/categories",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_CATEGORIE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"libelle\": \"Électronique Bisssss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/categories/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_CATEGORIE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/categories/11",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"categories",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "APPARTENIRS",
+			"item": [
+				{
+					"name": "GET_APPARTENIRS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/appartenirs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"appartenirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_APPARTENIR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/appartenirs/2/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"appartenirs",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_APPARTENIR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categorie\": {\r\n        \"id\": 1,\r\n        \"libelle\": \"Électronique\"\r\n    },\r\n    \"id\": {\r\n        \"produitId\": 2,\r\n        \"categorieId\": 1\r\n    },\r\n    \"produit\": {\r\n        \"description\": \"Jean bleu pour hommes\",\r\n        \"id\": 2,\r\n        \"nom\": \"Jeans\",\r\n        \"prix\": 39.99,\r\n        \"stock\": 50\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/appartenirs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"appartenirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_APPARTENIR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/appartenirs/2/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"appartenirs",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CONTENIRS",
+			"item": [
+				{
+					"name": "GET_CONTENIRS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/contenirs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contenirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_CONTENIR",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/contenirs/1/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contenirs",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_CONTENIR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commande\": {\r\n        \"client\": {\r\n            \"adresse\": \"10 Rue de Rivoli\",\r\n            \"codePostal\": \"75001\",\r\n            \"email\": \"Dupont.Jean@entreprise.com\",\r\n            \"id\": 1,\r\n            \"nom\": \"Dupont\",\r\n            \"prenom\": \"Jean\",\r\n            \"telephone\": \"0102030405\",\r\n            \"ville\": \"Paris\"\r\n        },\r\n        \"id\": 1,\r\n        \"paiement\": {\r\n            \"date\": \"2024-01-01\",\r\n            \"id\": 1,\r\n            \"method\": \"Carte de Crédit\",\r\n            \"montant\": 499.99\r\n        }\r\n    },\r\n    \"id\": {\r\n        \"produitId\": 2,\r\n        \"commandeId\": 1\r\n    },\r\n    \"produit\": {\r\n        \"description\": \"Jean bleu pour hommes\",\r\n        \"id\": 2,\r\n        \"nom\": \"Jeans\",\r\n        \"prix\": 39.99,\r\n        \"stock\": 50\r\n    },\r\n    \"quantite\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/contenirs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contenirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_CONTENIR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commande\": {\r\n        \"client\": {\r\n            \"adresse\": \"10 Rue de Rivoli\",\r\n            \"codePostal\": \"75001\",\r\n            \"email\": \"Dupont.Jean@entreprise.com\",\r\n            \"id\": 1,\r\n            \"nom\": \"Dupont\",\r\n            \"prenom\": \"Jean\",\r\n            \"telephone\": \"0102030405\",\r\n            \"ville\": \"Paris\"\r\n        },\r\n        \"id\": 1,\r\n        \"paiement\": {\r\n            \"date\": \"2024-01-01\",\r\n            \"id\": 1,\r\n            \"method\": \"Carte de Crédit\",\r\n            \"montant\": 499.99\r\n        }\r\n    },\r\n    \"id\": {\r\n        \"produitId\": 2,\r\n        \"commandeId\": 1\r\n    },\r\n    \"produit\": {\r\n        \"description\": \"Jean bleu pour hommes\",\r\n        \"id\": 2,\r\n        \"nom\": \"Jeans\",\r\n        \"prix\": 39.99,\r\n        \"stock\": 50\r\n    },\r\n    \"quantite\": 50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/contenirs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contenirs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_CONTENIR",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/contenirs/2/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"contenirs",
+								"2",
+								"1"
 							]
 						}
 					},
